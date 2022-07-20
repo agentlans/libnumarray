@@ -271,10 +271,10 @@ public:
     int get_ld() const { // Get leading dimension
         switch (get_order()) {
             case ROW_MAJOR_ORDER: 
-                return inc_col;
+                return inc_row;
                 break;
             case COL_MAJOR_ORDER:
-                return inc_row;
+                return inc_col;
                 break;
             default:
                 throw DimensionError(
